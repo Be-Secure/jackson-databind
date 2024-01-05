@@ -1,8 +1,10 @@
 name: "CodeQL"
 
 on:
-  schedule:
-    - cron: '40 21 * * 2'
+  push:
+    branches: ["jackson-databind-2.16.1_release"]
+  pull_request:
+    branches: ["jackson_databind-2.16.1_release"]
   # Used to be run on PRs, merges; but too unreliable, removed
 permissions:
   contents: read
